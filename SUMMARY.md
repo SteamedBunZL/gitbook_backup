@@ -8,6 +8,6 @@
 * [Android](android/README.md)
     * [Android知识汇总](android/Android知识汇总.md)
         * [Java](android/java/java.md)
-* [收藏网站](收藏网站/README.md)
-    * [暂存](收藏网站/暂存.md)
+* [收藏网站](favorite_website/README.md)
+    * [暂存](favorite_website/temp.md)
 
