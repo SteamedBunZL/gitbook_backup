@@ -10,11 +10,11 @@
 
 ### 10.解析Java中的内存模型
 
-![image-20210509160645209](/Users/zhanglong/Library/Application Support/typora-user-images/image-20210509160645209.png)
+<img src= "../../image/image-20210509160645209.png" width = "50%"  div align=center/>
 
 执行任务时,cpu会先将运算所需要使用的数据复制到高速缓存中,当运算结束后,再将缓存结果刷回主内存.当多个处理器同时操作主内存时,可能导致数据不一致,这就是缓存不一致问题
 
-![image-20210509160944860](/Users/zhanglong/Library/Application Support/typora-user-images/image-20210509160944860.png)
+![image-20210509160944860](../../image/image-20210509160944860.png)
 
 除了缓存一致性问题外,还有指令重排的问题.指令重排比较严重的问题是著名的DCL 问题
 
