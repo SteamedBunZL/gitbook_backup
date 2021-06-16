@@ -56,9 +56,14 @@
     "-search",
     "search-pro",
     "anchor-navigation-ex",
-    "theme-fexa"
+    "theme-fexa",
+    "popup",
+    "-ancre-navigation"
   ],
   "pluginsConfig": {
+    "anchor-navigation-ex": {
+           "showLevel": false
+    },
     "chapter-fold": {},
     "prism": {
       "css": [
