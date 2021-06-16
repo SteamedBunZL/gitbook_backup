@@ -1,0 +1,74 @@
+{
+  "author": "SteveZhang <张龙>",
+  "description": "This is a SteveZhang' Blog",
+  "extension": null,
+  "generator": "site",
+  "links": {
+    "sharing": {
+      "all": null,
+      "facebook": null,
+      "google": null,
+      "twitter": null,
+      "weibo": null
+    },
+    "sidebar": {
+      "SteveZhang's Github": "https://github.com/SteamedBunZL/test"
+    }
+  },
+  "output": null,
+  "pdf": {
+    "fontSize": 12,
+    "footerTemplate": null,
+    "headerTemplate": null,
+    "margin": {
+      "bottom": 36,
+      "left": 62,
+      "right": 62,
+      "top": 36
+    },
+    "pageNumbers": false,
+    "paperSize": "a4"
+  },
+  "title": "SteveZhang's Blog",
+  "variables": {
+    "themeFexa": {
+      "nav": [
+        {
+          "url": "https://developer.android.com/topic/performance/memory?hl=zh-cn",
+          "target": "_blank",
+          "name": "Android 中文开发文档"
+        },
+        {
+          "url": "https://www.kotlincn.net/docs/reference/",
+          "target": "_blank",
+          "name": "Kotlin 中文文档"
+        }
+      ]
+    }
+  },
+  "plugins": [
+    "chapter-fold",
+    "prism",
+    "-highlight",
+    "hide-element",
+    "splitter",
+    "-lunr",
+    "-search",
+    "search-pro",
+    "anchor-navigation-ex",
+    "theme-fexa"
+  ],
+  "pluginsConfig": {
+    "chapter-fold": {},
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-okaidia.css"
+      ]
+    },
+    "hide-element": {
+      "elements": [
+        ".gitbook-link"
+      ]
+    }
+  }
+}

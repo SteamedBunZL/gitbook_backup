@@ -1,1 +1,1 @@
-This is a book powered by [GitBook](https://github.com/GitbookIO/gitbook).
+欢迎来到张龙的世界~
