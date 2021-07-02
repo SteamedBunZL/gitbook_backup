@@ -3,6 +3,9 @@
   "description": "This is a SteveZhang' Blog",
   "extension": null,
   "generator": "site",
+  "styles":{
+    "website": "styles/website.css"
+  },
   "links": {
     "sharing": {
       "all": null,
@@ -33,6 +36,15 @@
   "variables": {
     "themeFexa": {
       "nav": [
+        { "url":"https://how2j.cn",
+          "target":"_blank",
+          "name":"how2j"
+          },
+        {
+          "url": "https://www.w3cschool.cn/css/",
+          "target": "_blank",
+          "name": "前端扫盲"
+        },
         {
           "url": "https://developer.android.com/topic/performance/memory?hl=zh-cn",
           "target": "_blank",
@@ -58,7 +70,8 @@
     "anchor-navigation-ex",
     "theme-fexa",
     "popup",
-    "-ancre-navigation"
+    "-ancre-navigation",
+    "todo"
   ],
   "pluginsConfig": {
     "anchor-navigation-ex": {
