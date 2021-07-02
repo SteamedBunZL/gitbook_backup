@@ -17,10 +17,11 @@ function handlerTocs($, page, modifyHeader) {
     var count = {
         h1: 0,
         h2: 0,
-        h3: 0
+        h3: 0,
+        h4: 0
     };
     var titleCountMap = {}; // 用来记录标题出现的次数
-    var h1 = 0, h2 = 0, h3 = 0;
+    var h1 = 0, h2 = 0, h3 = 0; h4 = 0;
     $(':header').each(function (i, elem) {
         var header = $(elem);
         var id = addId(header, titleCountMap);
@@ -173,6 +174,71 @@ function handlerH2Toc(config, count, header, tocs, pageLevel, modifyHeader) {
  * @param header
  */
 function handlerH3Toc(config, count, header, tocs, pageLevel, modifyHeader) {
+    var title = header.text();
+    var id = header.attr('id');
+    var level = ''; //层级
+
+    if (tocs.length <= 0) {
+        //一级节点为空时，生成一个空的一级节点，让二级节点附带在这个上面
+        if (config.showLevel) {
+            count.h1 += 1;
+        }
+        tocs.push({
+            name: "",
+            level: "",
+            url: "",
+            children: []
+        });
+    }
+    var h1Index = tocs.length - 1;
+    var h1Toc = tocs[h1Index];
+    var h2Tocs = h1Toc.children;
+    if (h2Tocs.length <= 0) {
+        //二级节点为空时，生成一个空的二级节点，让三级节点附带在这个上面
+        if (config.showLevel) {
+            count.h2 += 1;
+        }
+        h2Tocs.push({
+            name: "",
+            level: "",
+            url: "",
+            children: []
+        });
+    }
+    var h2Toc = h1Toc.children[h2Tocs.length - 1];
+
+    if (config.showLevel) {
+        count.h3 += 1;
+        if (config.multipleH1) {
+            level = (count.h1 + '.' + count.h2 + '.' + count.h3 + '. ');
+        } else {
+            level = (count.h2 + '.' + count.h3 + '. ');
+        }
+        if (config.associatedWithSummary && config.themeDefault.showLevel) {
+            level = pageLevel + "." + level;
+        }
+        if (!modifyHeader) {
+            level  = '';
+        }
+        header.text(level + title); //重写标题
+    }
+    titleAddAnchor(header, id);
+    h2Toc.children.push({
+        name: title,
+        level: level,
+        url: id,
+        children: []
+    });
+}
+
+
+/**
+ * todo
+ * 处理h4
+ * @param count 计数器
+ * @param header
+ */
+function handlerH4Toc(config, count, header, tocs, pageLevel, modifyHeader) {
     var title = header.text();
     var id = header.attr('id');
     var level = ''; //层级

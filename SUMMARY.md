@@ -11,9 +11,12 @@
         * [Kotlin](android/kotlin.md)
 * [Flutter](flutter/README.md)
     * [Flutter基础](flutter/flutter_base.md)
+* [Javascript](javascript/README.md)
+    * [Javascript基础](javascript/javascript基础.md)
 * [Markdown](markdown/markdown.md)
 * [收藏网站](favorite_website/README.md)
 * [每天随笔](day/README.md)
     * [2021年](day/README.md)
         * [6月](day/2021/6.md)
+        * [7月](day/2021/7.md)
 
