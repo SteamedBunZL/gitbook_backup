@@ -1,0 +1,1897 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.4 数组方法（join和sort） · SteveZhang's Blog</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="SteveZhang <张龙>">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-theme-fexa/fexa.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-24 数组方法（concat和slice）.html" />
+    
+    
+    <link rel="prev" href="2-13 数组方法push pop shift.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+	<div class="header-inner">
+		<!-- LOGO -->
+		<div class="logo"></div>
+		<span class="title"></span>
+
+		<!-- Search -->
+		
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+
+		<!-- Nav -->
+		<ul class="header-nav">
+			<li>
+				<a href="https://how2j.cn" target="_blank">how2j</a>
+			</li><li>
+				<a href="https://www.w3cschool.cn/css/" target="_blank">前端扫盲</a>
+			</li><li>
+				<a href="https://developer.android.com/topic/performance/memory?hl=zh-cn" target="_blank">Android 中文开发文档</a>
+			</li><li>
+				<a href="https://www.kotlincn.net/docs/reference/" target="_blank">Kotlin 中文文档</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="book-summary">
+		<div class="book-summary-title">文档目录</div>
+		
+		
+		<nav role="navigation">
+			
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/SteamedBunZL/test" target="_blank" class="custom-link">SteveZhang's Github</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../chapter1/">
+            
+                <a href="../../chapter1/">
+            
+                    
+                    Chapter1
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../chapter1/section1.1.html">
+            
+                <a href="../../chapter1/section1.1.html">
+            
+                    
+                    Section1.1
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../chapter1/section1.2.html">
+            
+                <a href="../../chapter1/section1.2.html">
+            
+                    
+                    Section1.2
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../chapter2/">
+            
+                <a href="../../chapter2/">
+            
+                    
+                    Chapter2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../android/">
+            
+                <a href="../../android/">
+            
+                    
+                    Android
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../android/Android知识汇总.html">
+            
+                <a href="../../android/Android知识汇总.html">
+            
+                    
+                    Android知识汇总
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../android/java/java.html">
+            
+                <a href="../../android/java/java.html">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../android/kotlin.html">
+            
+                <a href="../../android/kotlin.html">
+            
+                    
+                    Kotlin
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../flutter/">
+            
+                <a href="../../flutter/">
+            
+                    
+                    Flutter
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../flutter/flutter_base.html">
+            
+                <a href="../../flutter/flutter_base.html">
+            
+                    
+                    Flutter基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../01-JS语法.html">
+            
+                <a href="../01-JS语法.html">
+            
+                    
+                    01-JS语法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../01-JS语法/JavaScript语法规则.html">
+            
+                <a href="../01-JS语法/JavaScript语法规则.html">
+            
+                    
+                    1.JavaScript语法规则
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1.1" data-path="../01-JS语法/1.1JavaScript语法+变量.html">
+            
+                <a href="../01-JS语法/1.1JavaScript语法+变量.html">
+            
+                    
+                    1.1 JavaScript语法+变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../JavaScript数据类型.html">
+            
+                <a href="../JavaScript数据类型.html">
+            
+                    
+                    2.JavaScript数据类型
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.2.1" data-path="../01-JS语法/2.1undefined与null.html">
+            
+                <a href="../01-JS语法/2.1undefined与null.html">
+            
+                    
+                    2.1 undefined与null
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2.2" data-path="../01-JS语法/2.2Number与isNaN.html">
+            
+                <a href="../01-JS语法/2.2Number与isNaN.html">
+            
+                    
+                    2.2 Number与isNaN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2.3" data-path="../01-JS语法/2.3数值转换.html">
+            
+                <a href="../01-JS语法/2.3数值转换.html">
+            
+                    
+                    2.3 数值转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../01-JavaScript的String与Boolean.html">
+            
+                <a href="../01-JavaScript的String与Boolean.html">
+            
+                    
+                    3.JavaScript的String与Boolean
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../JavaScript算数操作符.html">
+            
+                <a href="../JavaScript算数操作符.html">
+            
+                    
+                    4.JavaScript算数操作符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.4.1" data-path="../01-JS语法/4.1算数操作符.html">
+            
+                <a href="../01-JS语法/4.1算数操作符.html">
+            
+                    
+                    4.1 算数操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4.2" data-path="../01-JS语法/4.2其他操作符.html">
+            
+                <a href="../01-JS语法/4.2其他操作符.html">
+            
+                    
+                    4.2 其他操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../JavaScript逻辑操作符.html">
+            
+                <a href="../JavaScript逻辑操作符.html">
+            
+                    
+                    5.JavaScript逻辑操作符
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.5.1" data-path="../01-JS语法/5.1逻辑与.html">
+            
+                <a href="../01-JS语法/5.1逻辑与.html">
+            
+                    
+                    5.1 逻辑与
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5.2" data-path="../01-JS语法/5.2逻辑或逻辑非.html">
+            
+                <a href="../01-JS语法/5.2逻辑或逻辑非.html">
+            
+                    
+                    5.2 逻辑或逻辑非
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../02-JS流程控制语句.html">
+            
+                <a href="../02-JS流程控制语句.html">
+            
+                    
+                    02-JS流程控制语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../02-JS流程控制语句/JavaScript分支语句.html">
+            
+                <a href="../02-JS流程控制语句/JavaScript分支语句.html">
+            
+                    
+                    1.JavaScript分支语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1.1" data-path="../02-JS流程控制语句/1.1 if语句.html">
+            
+                <a href="../02-JS流程控制语句/1.1 if语句.html">
+            
+                    
+                    1.1 if语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.2" data-path="../02-JS流程控制语句/1.2 if语句的嵌套.html">
+            
+                <a href="../02-JS流程控制语句/1.2 if语句的嵌套.html">
+            
+                    
+                    1.2 if语句的嵌套
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.1.3" data-path="../02-JS流程控制语句/1.3 switch.html">
+            
+                <a href="../02-JS流程控制语句/1.3 switch.html">
+            
+                    
+                    1.3 switch
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../02-JS流程控制语句/JavaScript循环语句.html">
+            
+                <a href="../02-JS流程控制语句/JavaScript循环语句.html">
+            
+                    
+                    2.JavaScript循环语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.2.1" data-path="../02-JS流程控制语句/2.1 for语句（最常用的循环）.html">
+            
+                <a href="../02-JS流程控制语句/2.1 for语句（最常用的循环）.html">
+            
+                    
+                    2.1 for语句（最常用的循环）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.2" data-path="../02-JS流程控制语句/2.2 for嵌套（最常用的循环）.html">
+            
+                <a href="../02-JS流程控制语句/2.2 for嵌套（最常用的循环）.html">
+            
+                    
+                    2.2 for嵌套（最常用的循环）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2.3" data-path="../02-JS流程控制语句/2.3 while循环.html">
+            
+                <a href="../02-JS流程控制语句/2.3 while循环.html">
+            
+                    
+                    2.3 while循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.3" data-path="../02-JS流程控制语句/break及continue语句.html">
+            
+                <a href="../02-JS流程控制语句/break及continue语句.html">
+            
+                    
+                    3.break及continue语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.3.1" data-path="../02-JS流程控制语句/3.1 break与continue.html">
+            
+                <a href="../02-JS流程控制语句/3.1 break与continue.html">
+            
+                    
+                    3.1 break与continue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../03-JS函数.html">
+            
+                <a href="../03-JS函数.html">
+            
+                    
+                    03-JS函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" data-path="../03-JS函数/JavaScript函数.html">
+            
+                <a href="../03-JS函数/JavaScript函数.html">
+            
+                    
+                    1.JavaScript函数
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1.1" data-path="../03-JS函数/1-1 函数的定义和调用.html">
+            
+                <a href="../03-JS函数/1-1 函数的定义和调用.html">
+            
+                    
+                    1.1 函数的定义和调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.1.2" data-path="../03-JS函数/1-2 函数的返回值.html">
+            
+                <a href="../03-JS函数/1-2 函数的返回值.html">
+            
+                    
+                    1.2 函数的返回值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.1.3" data-path="../03-JS函数/1-3 arguments.html">
+            
+                <a href="../03-JS函数/1-3 arguments.html">
+            
+                    
+                    1.3 arguments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3.1.4" data-path="../03-JS函数/1-4 求任意一组数的平均值.html">
+            
+                <a href="../03-JS函数/1-4 求任意一组数的平均值.html">
+            
+                    
+                    1.4 求任意一组数的平均值
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../04-JS内置对象.html">
+            
+                <a href="../04-JS内置对象.html">
+            
+                    
+                    04-JS内置对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.1" data-path="1-1 javaScript中内置对象介绍.html">
+            
+                <a href="1-1 javaScript中内置对象介绍.html">
+            
+                    
+                    1.JavaScript中内置对象介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2" data-path="第2章 JavaScript对象之数组.html">
+            
+                <a href="第2章 JavaScript对象之数组.html">
+            
+                    
+                    2.JavaScript对象之数组
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.2.1" data-path="2-1 Array数组（1）.html">
+            
+                <a href="2-1 Array数组（1）.html">
+            
+                    
+                    2.1 Array数组（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.2" data-path="2-8 Array数组（2）.html">
+            
+                <a href="2-8 Array数组（2）.html">
+            
+                    
+                    2.2 Array数组（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.3" data-path="2-13 数组方法push pop shift.html">
+            
+                <a href="2-13 数组方法push pop shift.html">
+            
+                    
+                    2.3 数组方法（push()-unshift()-pop()和shift()）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.4.2.4" data-path="2-18 数组方法（join和sort）.html">
+            
+                <a href="2-18 数组方法（join和sort）.html">
+            
+                    
+                    2.4 数组方法（join和sort）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.5" data-path="2-24 数组方法（concat和slice）.html">
+            
+                <a href="2-24 数组方法（concat和slice）.html">
+            
+                    
+                    2.5 数组方法（concat和slice）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.6" data-path="2-28 数组方法（splice）.html">
+            
+                <a href="2-28 数组方法（splice）.html">
+            
+                    
+                    2.6 数组方法（splice）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.2.7" data-path="2-33 数组方法（indexOf和lastIndexOf）.html">
+            
+                <a href="2-33 数组方法（indexOf和lastIndexOf）.html">
+            
+                    
+                    2.7 数组方法（indexOf和lastIndexOf）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3" data-path="第3章 JavaScript对象之String.html">
+            
+                <a href="第3章 JavaScript对象之String.html">
+            
+                    
+                    3.JavaScript对象之String
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.3.1" data-path="3-1 String（字符串检索方法）.html">
+            
+                <a href="3-1 String（字符串检索方法）.html">
+            
+                    
+                    3.1 String（字符串检索方法）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.2" data-path="3-8 String slice substr.html">
+            
+                <a href="3-8 String slice substr.html">
+            
+                    
+                    3.2 String（slice()-substring()和substr()）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.3" data-path="3-16 String综合应用.html">
+            
+                <a href="3-16 String综合应用.html">
+            
+                    
+                    3.3 String综合应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.4" data-path="3-20 String（split和replace）.html">
+            
+                <a href="3-20 String（split和replace）.html">
+            
+                    
+                    3.4 String（split和replace）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.3.5" data-path="3-26 String（toUpperCase和toLowerCase）.html">
+            
+                <a href="3-26 String（toUpperCase和toLowerCase）.html">
+            
+                    
+                    3.5 String（toUpperCase和toLowerCase）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.4" data-path="第4章 JavaScript之Math对象.html">
+            
+                <a href="第4章 JavaScript之Math对象.html">
+            
+                    
+                    第4章 JavaScript之Math对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.4.1" data-path="4-1 Math对象min abs.html">
+            
+                <a href="4-1 Math对象min abs.html">
+            
+                    
+                    4.1 Math对象（min()-max()-ceil()-floor()-round()和abs()）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.4.2" data-path="4-5 Math对象random .html">
+            
+                <a href="4-5 Math对象random .html">
+            
+                    
+                    4.2 Math对象(random())
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.5" data-path="第5章 JavaScript之Date对象.html">
+            
+                <a href="第5章 JavaScript之Date对象.html">
+            
+                    
+                    第5章 JavaScript之Date对象
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.4.5.1" data-path="5-1 date（1）.html">
+            
+                <a href="5-1 date（1）.html">
+            
+                    
+                    5.1 date（1）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4.5.2" data-path="5-7 date（2）.html">
+            
+                <a href="5-7 date（2）.html">
+            
+                    
+                    5.2 date（2）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../05-错误调试与处理.html">
+            
+                <a href="../05-错误调试与处理.html">
+            
+                    
+                    05-错误调试与处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.1" data-path="../05-错误调试与处理/2-1 语法错误.html">
+            
+                <a href="../05-错误调试与处理/2-1 语法错误.html">
+            
+                    
+                    1. 语法错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.2" data-path="../05-错误调试与处理/2-2 运行时错误.html">
+            
+                <a href="../05-错误调试与处理/2-2 运行时错误.html">
+            
+                    
+                    2. 运行时错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.3" data-path="../05-错误调试与处理/2-3 如何区分语法错误与运行时错误.html">
+            
+                <a href="../05-错误调试与处理/2-3 如何区分语法错误与运行时错误.html">
+            
+                    
+                    3. 如何区分语法错误与运行时错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.4" data-path="../05-错误调试与处理/2-4 逻辑错误.html">
+            
+                <a href="../05-错误调试与处理/2-4 逻辑错误.html">
+            
+                    
+                    4. 逻辑错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.5" data-path="../05-错误调试与处理/2-5 try-catch语句.html">
+            
+                <a href="../05-错误调试与处理/2-5 try-catch语句.html">
+            
+                    
+                    5. try-catch语句
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.5.1" data-path="../06-JS DOM操作.html">
+            
+                <a href="../06-JS DOM操作.html">
+            
+                    
+                    06-JS DOM操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.6" data-path="../06-JS DOM操作/第2章 创建节点.html">
+            
+                <a href="../06-JS DOM操作/第2章 创建节点.html">
+            
+                    
+                    1. 创建节点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.6.1" data-path="../06-JS DOM操作/2-1 document.html">
+            
+                <a href="../06-JS DOM操作/2-1 document.html">
+            
+                    
+                    1.1 document
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.6.2" data-path="../06-JS DOM操作/2-2 create系列创建节点的方法.html">
+            
+                <a href="../06-JS DOM操作/2-2 create系列创建节点的方法.html">
+            
+                    
+                    2-2 create系列创建节点的方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.6.3" data-path="../06-JS DOM操作/2-6 高效创建节点的方法innerHTML-outerHTML.html">
+            
+                <a href="../06-JS DOM操作/2-6 高效创建节点的方法innerHTML-outerHTML.html">
+            
+                    
+                    2-6 高效创建节点的方法(innerHTML-outerHTML)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.6.4" data-path="../06-JS DOM操作/2-8 高效创建节点的方法innerText-outerText.html">
+            
+                <a href="../06-JS DOM操作/2-8 高效创建节点的方法innerText-outerText.html">
+            
+                    
+                    2-8 高效创建节点的方法 (innerText-outerText)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7" data-path="../06-JS DOM操作/第3章 节点遍历.html">
+            
+                <a href="../06-JS DOM操作/第3章 节点遍历.html">
+            
+                    
+                    2. 节点遍历
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.7.1" data-path="../06-JS DOM操作/3-1 节点遍历方法.html">
+            
+                <a href="../06-JS DOM操作/3-1 节点遍历方法.html">
+            
+                    
+                    2.1 节点遍历方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.2" data-path="../06-JS DOM操作/3-3 节点遍历实现.html">
+            
+                <a href="../06-JS DOM操作/3-3 节点遍历实现.html">
+            
+                    
+                    2.2 节点遍历实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.3" data-path="../06-JS DOM操作/3-6 节点遍历案例.html">
+            
+                <a href="../06-JS DOM操作/3-6 节点遍历案例.html">
+            
+                    
+                    2.3 节点遍历案例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.4" data-path="../06-JS DOM操作/3-8 节点遍历（解决空白节点）.html">
+            
+                <a href="../06-JS DOM操作/3-8 节点遍历（解决空白节点）.html">
+            
+                    
+                    2.4 节点遍历（解决空白节点）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.5" data-path="../06-JS DOM操作/3-10 类数组对象 NodeList.html">
+            
+                <a href="../06-JS DOM操作/3-10 类数组对象 NodeList.html">
+            
+                    
+                    2.5 类数组对象 NodeList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.6" data-path="../06-JS DOM操作/3-11 类数组对象 HTMLCollection.html">
+            
+                <a href="../06-JS DOM操作/3-11 类数组对象 HTMLCollection.html">
+            
+                    
+                    2.6 类数组对象 HTMLCollection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.7" data-path="../06-JS DOM操作/3-13 类数组对象 NamedNodeMap.html">
+            
+                <a href="../06-JS DOM操作/3-13 类数组对象 NamedNodeMap.html">
+            
+                    
+                    2.7 类数组对象 NamedNodeMap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.7.8" data-path="../06-JS DOM操作/3-15 类数组对象的动态性.html">
+            
+                <a href="../06-JS DOM操作/3-15 类数组对象的动态性.html">
+            
+                    
+                    2.8 类数组对象的动态性
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8" data-path="../06-JS DOM操作/第4章 获取节点.html">
+            
+                <a href="../06-JS DOM操作/第4章 获取节点.html">
+            
+                    
+                    3. 获取节点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.8.1" data-path="../06-JS DOM操作/4-1 getElementById方法.html">
+            
+                <a href="../06-JS DOM操作/4-1 getElementById方法.html">
+            
+                    
+                    3.1 getElementById()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.2" data-path="../06-JS DOM操作/4-3 解决getElementById的bug.html">
+            
+                <a href="../06-JS DOM操作/4-3 解决getElementById的bug.html">
+            
+                    
+                    3.2 解决getElementById()的bug
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.3" data-path="../06-JS DOM操作/4-4 getElementsByName方法.html">
+            
+                <a href="../06-JS DOM操作/4-4 getElementsByName方法.html">
+            
+                    
+                    3.3 getElementsByName()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.4" data-path="../06-JS DOM操作/4-6 getElementsByTagName方法.html">
+            
+                <a href="../06-JS DOM操作/4-6 getElementsByTagName方法.html">
+            
+                    
+                    3.4 getElementsByTagName()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.5" data-path="../06-JS DOM操作/4-7 getElementsByClassName方法.html">
+            
+                <a href="../06-JS DOM操作/4-7 getElementsByClassName方法.html">
+            
+                    
+                    3.5 getElementsByClassName()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.6" data-path="../06-JS DOM操作/4-9 解决getElementsByClassName兼容性.html">
+            
+                <a href="../06-JS DOM操作/4-9 解决getElementsByClassName兼容性.html">
+            
+                    
+                    3.6 解决getElementsByClassName()兼容性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.8.7" data-path="../06-JS DOM操作/4-10 querySelector和querySelectorAll方法.html">
+            
+                <a href="../06-JS DOM操作/4-10 querySelector和querySelectorAll方法.html">
+            
+                    
+                    3.7 querySelector()和querySelectorAll()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9" data-path="../06-JS DOM操作/第5章 操作节点.html">
+            
+                <a href="../06-JS DOM操作/第5章 操作节点.html">
+            
+                    
+                    4. 操作节点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.9.1" data-path="../06-JS DOM操作/5-1 appendChild添加节点.html">
+            
+                <a href="../06-JS DOM操作/5-1 appendChild添加节点.html">
+            
+                    
+                    4.1 appendChild添加节点()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9.2" data-path="../06-JS DOM操作/5-3 insertBefore.html">
+            
+                <a href="../06-JS DOM操作/5-3 insertBefore.html">
+            
+                    
+                    4.2 insertBefore()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9.3" data-path="../06-JS DOM操作/5-4 replaceChild方法.html">
+            
+                <a href="../06-JS DOM操作/5-4 replaceChild方法.html">
+            
+                    
+                    4.3 replaceChild()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9.4" data-path="../06-JS DOM操作/5-6 cloneNode方法.html">
+            
+                <a href="../06-JS DOM操作/5-6 cloneNode方法.html">
+            
+                    
+                    4.4 cloneNode()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9.5" data-path="../06-JS DOM操作/5-7 normalize方法.html">
+            
+                <a href="../06-JS DOM操作/5-7 normalize方法.html">
+            
+                    
+                    4.5 normalize()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.9.6" data-path="../06-JS DOM操作/5-8 splitText方法.html">
+            
+                <a href="../06-JS DOM操作/5-8 splitText方法.html">
+            
+                    
+                    4.6 splitText()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.10" data-path="../06-JS DOM操作/第6章 删除节点.html">
+            
+                <a href="../06-JS DOM操作/第6章 删除节点.html">
+            
+                    
+                    5. 删除节点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.5.10.1" data-path="../06-JS DOM操作/6-1 removeChild和removeNode方法.html">
+            
+                <a href="../06-JS DOM操作/6-1 removeChild和removeNode方法.html">
+            
+                    
+                    5.1 removeChild()和removeNode()方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5.10.2" data-path="../06-JS DOM操作/6-2 removeChild与innerHTML比较.html">
+            
+                <a href="../06-JS DOM操作/6-2 removeChild与innerHTML比较.html">
+            
+                    
+                    5.2 removeChild()与innerHTML比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../markdown/markdown.html">
+            
+                <a href="../../markdown/markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../favorite_website/">
+            
+                <a href="../../favorite_website/">
+            
+                    
+                    收藏网站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../day/">
+            
+                <a href="../../day/">
+            
+                    
+                    每天随笔
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../day/">
+            
+                <a href="../../day/">
+            
+                    
+                    2021年
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1.1" data-path="../../day/2021/6.html">
+            
+                <a href="../../day/2021/6.html">
+            
+                    
+                    6月
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.1.2" data-path="../../day/2021/7.html">
+            
+                <a href="../../day/2021/7.html">
+            
+                    
+                    7月
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+		</nav>
+		
+		
+	</div>
+
+	<!-- Content nav -->
+	<!-- <div class="book-anchor">
+		<div class="book-anchor-title">在这篇文章中:</div>
+		<div class="book-anchor-body">
+
+		</div>
+	</div> -->
+
+	<div class="book-body">
+		
+		<div class="body-inner">
+			
+			
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >2.4 数组方法（join和sort）</a>
+    </h1>
+</div>
+
+
+
+
+			<div class="page-wrapper" tabindex="-1" role="main">
+				<div class="page-inner">
+					
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+					<section class="normal markdown-section">
+						
+						<div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#24-&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;"><b></b>2.4 &#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;</a></li><ul><li><span class="title-icon "></span><a href="#1join-&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><b></b>1.join &#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;</a></li><li><span class="title-icon "></span><a href="#2reverse-&#x53CD;&#x5E8F;"><b></b>2.reverse &#x53CD;&#x5E8F;</a></li><li><span class="title-icon "></span><a href="#3sort-&#x6392;&#x5E8F;"><b></b>3.sort &#x6392;&#x5E8F;</a></li></ul></ul></div><a href="#24-&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="24-&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;"><a name="24-&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;" class="anchor-navigation-ex-anchor" href="#24-&#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>2.4 &#x6570;&#x7EC4;&#x65B9;&#x6CD5;&#xFF08;join&#x548C;sort&#xFF09;</h1>
+<p><img src="../../image/image-20210703144433610.png" alt="image-20210703144433610"></p>
+<h2 id="1join-&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><a name="1join-&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#1join-&#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>1.join &#x628A;&#x6570;&#x7EC4;&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;</h2>
+<p><img src="../../image/image-20210703144709268.png" alt="image-20210703144709268"></p>
+<p><img src="../../image/image-20210703144824306.png" alt="image-20210703144824306"></p>
+<p><img src="../../image/image-20210703144952439.png" alt="image-20210703144952439"></p>
+<p><img src="../../image/image-20210703145154957.png" alt="image-20210703145154957"></p>
+<p><img src="../../image/image-20210703145242808.png" alt="image-20210703145242808"></p>
+<h2 id="2reverse-&#x53CD;&#x5E8F;"><a name="2reverse-&#x53CD;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#2reverse-&#x53CD;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>2.reverse &#x53CD;&#x5E8F;</h2>
+<p><img src="../../image/image-20210703145358413.png" alt="image-20210703145358413"></p>
+<p><img src="../../image/image-20210703145453427.png" alt="image-20210703145453427"></p>
+<p><img src="../../image/image-20210703145546626.png" alt="image-20210703145546626"></p>
+<h2 id="3sort-&#x6392;&#x5E8F;"><a name="3sort-&#x6392;&#x5E8F;" class="anchor-navigation-ex-anchor" href="#3sort-&#x6392;&#x5E8F;"><i class="fa fa-link" aria-hidden="true"></i></a>3.sort &#x6392;&#x5E8F;</h2>
+<p><img src="../../image/image-20210703145629381.png" alt="image-20210703145629381"></p>
+<p><img src="../../image/image-20210703150004170.png" alt="image-20210703150004170"></p>
+<p><img src="../../image/image-20210703150306385.png" alt="image-20210703150306385"></p>
+
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+						
+					</section>
+					
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+				</div>
+			</div>
+			
+		</div>
+
+		
+		
+		<a href="2-13 数组方法push pop shift.html" class="navigation navigation-prev " aria-label="Previous page: 2.3 数组方法（push()-unshift()-pop()和shift()）">
+			<i class="fa fa-angle-left"></i>
+		</a>
+		
+		
+		<a href="2-24 数组方法（concat和slice）.html" class="navigation navigation-next " aria-label="Next page: 2.5 数组方法（concat和slice）">
+			<i class="fa fa-angle-right"></i>
+		</a>
+		
+		
+		
+	</div>
+	<script>
+		var gitbook = gitbook || [];
+		gitbook.push(function() {
+			gitbook.page.hasChanged({"page":{"title":"2.4 数组方法（join和sort）","level":"1.6.4.2.4","depth":4,"next":{"title":"2.5 数组方法（concat和slice）","level":"1.6.4.2.5","depth":4,"path":"javascript/04-JS内置对象/2-24 数组方法（concat和slice）.md","ref":"javascript/04-JS内置对象/2-24 数组方法（concat和slice）.md","articles":[]},"previous":{"title":"2.3 数组方法（push()-unshift()-pop()和shift()）","level":"1.6.4.2.3","depth":4,"path":"javascript/04-JS内置对象/2-13 数组方法push pop shift.md","ref":"javascript/04-JS内置对象/2-13 数组方法push pop shift.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","prism","-highlight","hide-element","splitter","-lunr","-search","search-pro","anchor-navigation-ex","theme-fexa","popup","-ancre-navigation","todo"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"todo":{},"splitter":{},"search-pro":{},"popup":{},"theme-fexa":{},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"showLevel":false,"associatedWithSummary":true,"mode":"float","showGoTop":true,"printLog":false,"multipleH1":true,"float":{"floatIcon":"fa fa-navicon","showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""},"pageTop":{"showLevelIcon":false,"level1Icon":"","level2Icon":"","level3Icon":""}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"SteveZhang <张龙>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{"themeFexa":{"nav":[{"url":"https://how2j.cn","target":"_blank","name":"how2j"},{"url":"https://www.w3cschool.cn/css/","target":"_blank","name":"前端扫盲"},{"url":"https://developer.android.com/topic/performance/memory?hl=zh-cn","target":"_blank","name":"Android 中文开发文档"},{"url":"https://www.kotlincn.net/docs/reference/","target":"_blank","name":"Kotlin 中文文档"}]}},"title":"SteveZhang's Blog","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"SteveZhang's Github":"https://github.com/SteamedBunZL/test"}},"gitbook":"*","description":"This is a SteveZhang' Blog","extension":null},"file":{"path":"javascript/04-JS内置对象/2-18 数组方法（join和sort）.md","mtime":"2021-07-03T07:06:19.255Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-07-04T21:22:04.135Z"},"basePath":"../..","book":{"language":""}});
+		});
+	</script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-theme-fexa/fexa.js"></script>
+        
+    
+
+    </body>
+</html>
+
