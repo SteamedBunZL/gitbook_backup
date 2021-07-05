@@ -1,2 +1,28 @@
 # 3.5 getElementsByClassName()方法
 
+
+
+这个方法在较新的元素才可用   返回的也是类数组对象 HTMLCollection
+
+
+
+![image-20210706053115756](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053115756.png)
+
+
+
+![image-20210706053131111](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053131111.png)
+
+
+
+拿到的个数是2  
+
+
+
+![image-20210706053237644](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053237644.png)
+
+![image-20210706053245511](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053245511.png)
+
+
+
+颠倒位置，并不影响，还是能获得这个对象
+
