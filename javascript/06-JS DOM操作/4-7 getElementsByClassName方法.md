@@ -6,11 +6,11 @@
 
 
 
-![image-20210706053115756](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053115756.png)
+![image-20210706053115756](../../image/image-20210706053115756.png)
 
 
 
-![image-20210706053131111](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053131111.png)
+![image-20210706053131111](../../image/image-20210706053131111.png)
 
 
 
@@ -18,9 +18,9 @@
 
 
 
-![image-20210706053237644](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053237644.png)
+![image-20210706053237644](../../image/image-20210706053237644.png)
 
-![image-20210706053245511](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706053245511.png)
+![image-20210706053245511](../../image/image-20210706053245511.png)
 
 
 

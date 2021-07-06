@@ -10,7 +10,7 @@
 
 
 
-![image-20210706052619592](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706052619592.png)
+![image-20210706052619592](../../image/image-20210706052619592.png)
 
 
 
@@ -20,13 +20,13 @@
 
 传入* 可以打印所有元素
 
-![image-20210706052858187](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706052858187.png)
+![image-20210706052858187](../../image/image-20210706052858187.png)
 
 
 
 
 
-![image-20210706052913408](/home/stevenzhang/home/git/gitbook_backup/image/image-20210706052913408.png)
+![image-20210706052913408](../../image/image-20210706052913408.png)
 
 
 
